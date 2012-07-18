@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <style></style>
+    <link type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-contextmenu.js"></script>
+    <script type="text/javascript">
+      $(function(){
+	$('#content a').contextmenu() 
+	// Event object for the context click will be put into 'e' data of a context menu
+
+	$('#menu a').click(function(){
+	  var $m = $(this).closest('.context-menu');	  
+	  alert($($m.data('e').target).text())	// Display text of the parent link
+	});
+      })
+    </script>
+  </head>
+  <body style="width: 100%; height: 100%;">
+      <h2>Right click a link</h2>
+      <div id="content" style="margin: 0 auto;width: 100px;">
+	<div>
+	  <a data-context-menu="#menu1" href="#">Menu 1</a>	
+	</div>
+	<div>
+	  <a data-context-menu="#menu2" href="#">Menu 2</a>	
+	</div>
+	<div>
+	  <a data-context-menu="#menu3" href="#">Menu 3</a>	
+	</div>
+	<div>
+	  <a data-context-menu="#menu1" href="#">Menu 4</a>	
+	</div>
+	<div>
+	  <a data-context-menu="#menu2" href="#">Menu 5</a>	
+	</div>
+	<div>
+	  <a data-context-menu="#menu3" href="#">Menu 6</a>	
+	</div>
+	<div>
+	  <a data-context-menu="#menu1" href="#">Menu 7</a>	
+	</div>
+	<div>
+	  <a data-context-menu="#menu2" href="#">Menu 8</a>	
+	</div>
+	<div>
+	  <a data-context-menu="#menu3" href="#">Menu 9</a>	
+	</div>
+      </div>
+    
+      <ul id="menu1" class="context-menu dropdown-menu">
+	    <li><a href="#">Action 1</a></li>
+	    <li><a href="#">Another action 1</a></li>
+	    <li><a href="#">Something else here 1</a></li>
+	    <li class="divider"></li>
+	    <li><a href="#">Separated link 1</a></li>
+      </ul>
+
+      <ul id="menu2" class="context-menu dropdown-menu">
+	    <li><a href="#">Action 2</a></li>
+	    <li><a href="#">Another action 2</a></li>
+	    <li><a href="#">Something else here 2</a></li>
+	    <li class="divider"></li>
+	    <li><a href="#">Separated link 2</a></li>
+      </ul>
+
+      <ul id="menu3" class="context-menu dropdown-menu">
+	    <li><a href="#">Action 3</a></li>
+	    <li><a href="#">Another action 3</a></li>
+	    <li><a href="#">Something else here 3</a></li>
+	    <li class="divider"></li>
+	    <li><a href="#">Separated link 3</a></li>
+      </ul>
+  </body>
+</html>
