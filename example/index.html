@@ -11,7 +11,7 @@
 	$('#content a').contextmenu() 
 	// Event object for the context click will be put into 'e' data of a context menu
 
-	$('#menu a').click(function(){
+	$('#menu1 a, #menu2 a, #menu3 a').click(function(){
 	  var $m = $(this).closest('.context-menu');	  
 	  alert($($m.data('e').target).text())	// Display text of the parent link
 	});
